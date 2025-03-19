@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Badge from "../components/Badge.astro";
+import GithubIcon from "../icons/Github.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../icons/Mail.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import BriefCase from "../icons/BriefCase.astro";
+import Code from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio de jpradou - Desarrollador y Programador Web con 2 años de experiencia"
+  description="Contrata a JpradoU para desarrollar aplicaciones y trabajar junto a una persona dedicada, autónoma y sobre todo agradecida."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <div class="bg-[#396afc] flex md:hidden justify-center size-14 overflow-hidden rounded-full mb-4">
+        <img class="rounded-full -mb-1" src="/src/assets/11.png" alt="JosePra photo" />
+      </div>
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hola, soy JosePra
+        <a href="https://www.linkedin.com/in/jpradou" target="_blank" rel="noopener" class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+2 años creando proyectos web desde cero.</span>
+        <span class="opacity-90 text-[#cbcaff]"> Especializado en Angular y Spring Boot.</span>
+        <span class="text-red-200/90"> De Lima, Perú 🇵🇪.</span>
+        <span class="opacity-70"> Listo para aportar valor y crecer en su equipo.</span>
+      </h2>
+
+      <nav class="flex gap-2 mt-6 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/jpradou">
+          <LinkedinIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/PradoUrqJose">
+          <GithubIcon class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:josepu03@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          josepu03@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <BriefCase class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
